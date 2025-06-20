@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Location de Cuves Chimiques</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="fade-in">
+  <h1>Location de cuves chimiques sécurisées</h1>
+  <p>Des solutions fiables pour vos produits dangereux</p>
+</header>
+
+<nav>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <ul id="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#cuves">Nos Cuves</a></li>
+    <li><a href="#secteurs">Secteurs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero-banner">
+  <div class="hero-content">
+    <h2>Pourquoi choisir notre entreprise ?</h2>
+    <p>Des cuves fiables, sûres et prêtes à l'emploi.</p>
+  </div>
+</section>
+
+<section id="about" class="fade-in">
+  <h2>Notre mission</h2>
+  <p>Nous sommes spécialisés dans la location de cuves chimiques de haute qualité, conformes aux normes les plus strictes.</p>
+</section>
+
+<section id="services" class="fade-in">
+  <h2>Nos services</h2>
+  <ul>
+    <li>Location de cuves (acier inox, PEHD…)</li>
+    <li>Cuves certifiées ADR et IMO</li>
+    <li>Stockage temporaire ou longue durée</li>
+    <li>Livraison & installation</li>
+    <li>Maintenance régulière</li>
+    <li>Conseils personnalisés</li>
+  </ul>
+</section>
+
+<section id="carousel" class="fade-in">
+  <h2>Nos cuves en images</h2>
+  <div class="slider">
+    <img src="1photo.jpg" alt="Cuve 1" />
+    <img src="2photo.jpg" alt="Cuve 2" />
+    <img src="3photo.jpg" alt="Cuve 3" />
+  </div>
+</section>
+
+<section id="avantages" class="fade-in">
+  <h2>Nos avantages</h2>
+  <ul>
+    <li>Sécurité</li>
+    <li>Conformité</li>
+    <li>Flexibilité</li>
+    <li>Expertise</li>
+    <li>Réactivité</li>
+    <li>Économie</li>
+  </ul>
+</section>
+
+<section id="cuves" class="fade-in">
+  <h2>Nos cuves</h2>
+  <p>Capacités, matériaux, certifications — tout est pensé pour la sécurité.</p>
+</section>
+
+<section id="secteurs" class="fade-in">
+  <h2>Secteurs d'activité</h2>
+  <ul>
+    <li>Industrie chimique</li>
+    <li>Pharmaceutique</li>
+    <li>Agroalimentaire</li>
+    <li>Traitement des eaux</li>
+    <li>Transport de matières dangereuses</li>
+  </ul>
+</section>
+
+<footer id="contact" class="fade-in">
+  <h2>Contact / Devis</h2>
+  <p>Nous sommes votre partenaire de confiance. Contactez-nous dès aujourd'hui.</p>
+  <button>Obtenir un devis</button>
+</footer>
+
+<script>
+  // Animation fade-in au scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.fade-in').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Menu burger mobile
+  const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
