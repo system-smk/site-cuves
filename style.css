@@ -71,7 +71,7 @@ ul li::before {
   background-image: url('3photo.jpg'); /* Choisis ici l’image à mettre en fond */
   background-size: cover;
   background-position: center;
-  animation: zoomBanner 3s ease-in-out infinite alternate;
+  animation: zoomBanner 8s ease-in-out infinite alternate;
   display: flex;
   align-items: center;
   justify-content: center;
